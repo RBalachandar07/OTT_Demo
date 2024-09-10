@@ -14,14 +14,9 @@ body {
 .movie-grid {
     display: flex;
     flex-wrap: wrap;
-    /* gap: 105px; */
     gap: 50px;
     padding: 20px;
-    /* justify-content: space-between; */
-    /* overflow: hidden; */
     justify-content: flex-start;
-
-    
 }
 
 @media screen and (min-width: 1200px)and (max-width: 1600px) {
