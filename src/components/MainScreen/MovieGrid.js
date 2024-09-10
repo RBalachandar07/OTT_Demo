@@ -6,7 +6,7 @@ const MovieGrid = ({ searchTerm }) => {
     const [page, setPage] = useState(1);  // Page starts at 1.
     const [loading, setLoading] = useState(false);
     const [hasMore, setHasMore] = useState(true);  // To check if there are more pages
-    // const API_URL = ;
+    const API_URL =`https://test.create.diagnal.com/data/page${page}.json` ;
     const Default_Poster_API_URL = "https://test.create.diagnal.com/images/placeholder_for_missing_posters.png";
     const fetchMovies = async () => {
         if (loading || !hasMore) return;
@@ -14,7 +14,7 @@ const MovieGrid = ({ searchTerm }) => {
         setLoading(true);
         try {
             console.log(`Fetching page ${page}...`);
-            const response = await fetch(`https://test.create.diagnal.com/data/page${page}.json`);
+            const response = await fetch(API_URL);
             if (!response.ok) {
                 setHasMore(false);
                 throw new Error("Failed to fetch data");
