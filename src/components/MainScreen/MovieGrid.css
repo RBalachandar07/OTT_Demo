@@ -38,9 +38,6 @@ body {
     flex-grow: 1;
     flex-basis: 23%; 
     max-width: 23%;
-    /* width:24% ;
-    padding: 10px;
-    text-align: center; */
     color: #FFFFFF;
     cursor: pointer;
 }
