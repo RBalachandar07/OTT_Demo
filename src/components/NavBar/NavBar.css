@@ -1,0 +1,108 @@
+.Header {
+    position:sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url('https://test.create.diagnal.com/images/nav_bar.png');
+    color: white;
+    padding: 20px;
+}
+
+.Header-right {
+    display: flex;
+    left: auto;
+    color: white; 
+}
+
+.backIcon{
+    margin-left: 1.5rem;
+}
+.search-icon img {
+    width: 20px; 
+    height: 20px;
+    margin-top: 0.4rem;
+    cursor: pointer;
+}
+.Header-right .search-icon {
+    margin-right: 35px;
+}
+.Header-right .search-icon:hover {
+    color: white;
+}
+.Header-right {
+    color: #B7B7B7; 
+    margin-right: 2px;
+    font-size: 17px;
+}
+.search-input {
+    color: white;
+    position:absolute;
+    font-weight: 600;
+    width: 60vw;
+    height: 39px;
+    margin-top:0rem;
+    border-radius: 5px;
+    background-color: #33373D;
+    right: 8rem;
+    border: 1px solid #B7B7B7;
+    letter-spacing: 0.4px;
+    text-align: left;
+}
+.clear-button {
+    position: absolute;
+    right: 7rem;
+    top: 1.5rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    font-weight: 500;
+  }
+  
+  .clear-button:hover {
+   color: black;
+   word-spacing: 0px;
+  }
+@media (min-width: 768px) {
+    .search-input {
+        width: 50vw;             
+        right: 6rem;             
+        height: 28px;         
+        padding-left: 70px;     
+        font-size: 14px;         
+    }
+}
+@media (max-width: 768px) {
+    .search-input {
+        width: 50vw;            
+        right: 6rem;             
+        height: 28px;          
+        padding-left: 70px;      
+        font-size: 14px;         
+    }
+}
+
+/* For mobile phones with width less than or equal to 480px */
+@media (max-width: 480px) {
+    .search-input {
+        width: 40vw;             
+        right: 6rem;           
+        height: 26px;           
+        padding-left: 50px;      
+        font-size: 13px;         
+    }
+}
+
+/* For very small phones with width less than or equal to 320px */
+@media (max-width: 300px) {
+    .search-input {
+        width: 10vw;             
+        right: 2rem;
+        height: 24px;            
+        padding-left: 50px;      
+        font-size: 12px;         
+    }
+}
