@@ -6,6 +6,7 @@ const MovieGrid = ({ searchTerm }) => {
     const [page, setPage] = useState(1);  // Page starts at 1.
     const [loading, setLoading] = useState(false);
     const [hasMore, setHasMore] = useState(true);  // To check if there are more pages
+    const [isInitialLoad, setIsInitialLoad]=useState(true);
     const API_URL =`https://test.create.diagnal.com/data/page${page}.json` ;
     const Default_Poster_API_URL = "https://test.create.diagnal.com/images/placeholder_for_missing_posters.png";
     const fetchMovies = async () => {
@@ -33,6 +34,7 @@ const MovieGrid = ({ searchTerm }) => {
             console.error("Error in fetching movies:", error);
         } finally {
             setLoading(false);
+            setIsInitialLoad(false);
         }
     };
 
@@ -69,7 +71,10 @@ const MovieGrid = ({ searchTerm }) => {
 
     return (
         <div className="movie-grid">
-            {filteredMovies.length > 0 ? (
+            {isInitialLoad && loading?(
+ <div className='no-movies-found'><p>Loading...</p></div>
+            )
+            :filteredMovies.length > 0 ? (
                 filteredMovies.map((movie, index) => (
                 <div key={index} className="movie-card">
                         <img 
