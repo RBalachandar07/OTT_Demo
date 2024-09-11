@@ -61,13 +61,20 @@ const MovieGrid = ({ searchTerm }) => {
         // Attach scroll event listener
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);  // Clean up the event listener on unmount
-    }, []);
+    }, [hasMore, loading]);
      // Using useMemo to memoize the filtered movie list based on the search term
      const filteredMovies = useMemo(() => {
         if (!searchTerm) return movies;
         const lowerCaseTerm = searchTerm.toLowerCase();
         return movies.filter(movie => movie.name.toLowerCase().includes(lowerCaseTerm));
     }, [searchTerm, movies]);
+
+    // const truncateText = (text, maxLength) => {
+    // if (text.length > maxLength) {
+    //     return text.substring(0, maxLength) + "...";
+    //     }
+    //     return text;
+    // };
 
     return (
         <div className="movie-grid">

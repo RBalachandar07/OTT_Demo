@@ -56,7 +56,14 @@ body {
     margin-top: 10px;
     font-size: 18px;
     color: #FFFFFF;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Limit to 2 lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.5rem;
 }
+
 .no-movies-found {
     color: white;
     font-size: 20px;
