@@ -79,12 +79,14 @@ const MovieGrid = ({ searchTerm, setTitle }) => {
             ) : filteredMovies.length > 0 ? (
                 filteredMovies.map((movie, index) => (
                     <div key={index} className="movie-card">
+                        <div className="movie-wrapper">
                         <img 
                             src={`https://test.create.diagnal.com/images/${movie["poster-image"]}`} 
                             alt={movie.name} 
                             onError={(e) => e.target.src = Default_Poster_API_URL} // Set default poster on error
                         />
-                        <p>{movie.name}</p> // Display movie name
+                        <p>{movie.name}</p>
+                        </div>
                     </div>
                 ))
             ) : (

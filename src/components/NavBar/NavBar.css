@@ -1,13 +1,18 @@
+/* Imported Titillium Web font */
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600&display=swap');
+
+    
 .Header {
     position:sticky;
     top: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-image: url('https://test.create.diagnal.com/images/nav_bar.png');
+    background-image: url("https://test.create.diagnal.com/images/nav_bar.png");
     color: white;
-    padding: 20px;
-    letter-spacing: 0.8px; /* Slight letter spacing globally */
+    padding: 18px;
+    z-index: 9;
+    letter-spacing: 0.8px; 
 }
 
 .Header-right {
@@ -22,9 +27,12 @@
 }
 .header-title {
     font-family: 'Titillium Web', sans-serif;
-    font-size: 18px;
-    margin-left: 10px;
+    margin-left: 30px;
     color: #FFFFFF;
+    font-size: 25px;
+    font-weight: 500;
+    position: absolute;
+    top:1.5vh;
 
 }
 
@@ -58,8 +66,11 @@
     border: 1px solid #B7B7B7;
     letter-spacing: 0.4px;
     text-align: left;
-    letter-spacing: 2px; /* Slight letter spacing globally */
+    letter-spacing: 2px;
+    font-family:Titillium Web,sans-serif;font-family:var(--font-roboto);
+    z-index:10 
 }
+.search-input ,.search-input :focus{outline:none}
 .clear-button {
     position: absolute;
     right: 7rem;
